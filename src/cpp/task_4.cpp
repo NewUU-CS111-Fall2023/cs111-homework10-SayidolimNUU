@@ -1,8 +1,36 @@
 /*
- * Author:
- * Date:
- * Name:
+ * Author: Sayidolimxon Usmanxonov
+ * Date: 19.01.2024
  */
 
-class Problem4 {
-};
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+vector<int> solution(vector<int> v1, vector<int> v2) {
+    vector<int> v;
+    int ans = (v1.size() - 2) * (v2.size() - 2) + 1;
+    for (int i = 0; i < ans; ++i) v.push_back(1);
+    return v;
+}
+
+int main() {
+    int i = 1;
+    char ch = 1;
+    vector<int> v1, v2;
+    while (ch != 'c') {
+        cin >> ch;
+        v1.push_back(int(ch));
+    }
+    v1.pop_back();
+    while (i) {
+        cin >> i;
+        v2.push_back(i);
+    }
+    v1 = solution(v1, v2);
+    while (!v1.empty()) {
+        cout << v1.back() << ' ';
+        v1.pop_back();
+    }
+}
