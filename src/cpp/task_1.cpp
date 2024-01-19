@@ -39,9 +39,7 @@ queue<int> solution(queue<int> v) {
 int main() {
     int i;
     queue<int> v;
-    cout << "To show the end of input, enter -1\n";
     while (cin >> i) {
-        if (i == -1) break;
         v.push(i);
     }
     v = solution(v);
