@@ -13,6 +13,7 @@
  *                                                       if it's non-zero and moves to the left;
  *          if faces 0, moves to the right and starts next state;
  *          next state moves to the right until non-zero, when it starts state 2;
+ *          halt;
  */
 
 
